@@ -17,12 +17,12 @@ class createXML
     {
         if ($cdata == false)
         {
-            $nodeElement = $this->root->ownerDocumenter->createElement($name, $value);
+            $nodeElement = $this->root->ownerDocument->createElement($name, $value);
             $this->node->appendChild($nodeElement);
         }
         else
         {
-            $nodeElement = $this->root->ownerDocumenter->createElement($name, $value);
+            $nodeElement = $this->root->ownerDocument->createElement($name, $value);
             $valueElement = $this->root->ownerDocument->createCDATASection($value);
             $this->node->appendChild($nodeElement);
             $nodeElement->appendChild($valueElement);
